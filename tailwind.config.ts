@@ -1,7 +1,6 @@
 import type { Config } from "tailwindcss";
 import typography from '@tailwindcss/typography';
 
-
 export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -31,16 +30,16 @@ export default {
         },
         borderFlow: {
           '0%': { 
-            backgroundPosition: '-200% 100%'
+            backgroundPosition: '-200% 100%',
           },
           '100%': { 
-            backgroundPosition: '200% 100%'
-          }
+            backgroundPosition: '200% 100%',
+          },
         },
       },
     },
   },
   plugins: [
-    typography()
+    typography, // Correctly reference the typography plugin without calling it
   ],
 } satisfies Config;
